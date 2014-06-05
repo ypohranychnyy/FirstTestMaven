@@ -1,0 +1,180 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <style>
+        html, body {
+            margin:0;
+            padding:0;
+        }
+
+        .captchaWrapper {
+            height:100px;
+            position: relative;
+            text-align: center;
+        }
+        #recaptcha_image{
+            border:1px solid #bfbfbf;
+            width: 274px  !important;
+            position: relative;
+            margin: 10px auto;
+        }
+
+        #recaptcha_image&gt; img {
+            width: 274px !important;
+        }
+        #controls{
+            width: 274px  !important;
+            display:inline;
+        }
+        #controls a{
+            color: #026698;
+        }
+
+        .clear {
+            clear:both;
+        }
+        .botHeader {
+            background: url(https://static.4shared.com/images/indexPage/header.png?ver=3887086628) left top repeat-x;
+            border-bottom: 1px #5e7d99 solid;
+            height: 59px;
+            position: relative;
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            width: 150px;
+            height: 40px;
+            margin: 0 auto;
+            background: url(https://static.4shared.com/images/newUi/header-logo.png?ver=541266950) left top no-repeat;
+        }
+
+
+        .site4sync .botHeader {
+            background: url(https://static.4shared.com/4sync.com/images/d1/blue_bg.png?ver=2805967996) left top repeat-x;
+            border-bottom: 1px #cedaea solid;
+        }
+
+        .site4sync .logo {
+            width: 115px;
+            height: 53px;
+            background: url(https://static.4shared.com/4sync.com/images/d1/4sync_logo.png?ver=1580166828) left bottom no-repeat;
+        }
+
+        .botContent {
+            padding: 15px;
+            font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
+            text-align: center;
+        }
+
+        .botContent h1 {
+            font-size: 24px;
+        }
+
+        .botContent h2 {
+            font-size: 16px;
+        }
+
+        .botContent h2 span {
+            color: #0574b5;
+            text-decoration: underline;
+        }
+        .submit-gray {
+            border:1px #bcbcbc solid;
+            background: #f5f5f5; /* Old browsers */
+            background: -moz-linear-gradient(top, #f5f5f5 0%, #e6e6e6 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#e6e6e6)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #f5f5f5 0%,#e6e6e6 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #f5f5f5 0%,#e6e6e6 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #f5f5f5 0%,#e6e6e6 100%); /* IE10+ */
+            background: linear-gradient(top, #f5f5f5 0%,#e6e6e6 100%); /* W3C */
+            -moz-box-shadow: inset 0px 0px 0px 1px #ffffff;
+            -webkit-box-shadow: inset 0px 0px 0px 1px #ffffff;
+            box-shadow: inset 0px 0px 0px 1px #ffffff;
+            color: #50555b;
+            padding:6px 0px 7px 0px;
+            text-align: center;
+            text-shadow:1px 1px 0 #fff;
+            cursor: pointer;
+            width:100px;
+            border-radius: 5px;
+            margin-top:10px;
+        }
+
+        .submit-gray:hover {
+            background: #f2f2f2; /* Old browsers */
+            background: -moz-linear-gradient(top,  #f2f2f2 0%, #dddddd 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #f2f2f2 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #f2f2f2 0%,#dddddd 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #f2f2f2 0%,#dddddd 100%); /* IE10+ */
+            background: linear-gradient(top,  #f2f2f2 0%,#dddddd 100%); /* W3C */
+            color: black;
+        }
+
+        .input-light-small {
+            background:#ffffff;
+            border:1px #d5d9dd solid;
+            border-top:1px #8097ab solid;
+            border-bottom:1px #d9dce1 solid;
+            padding:2px 5px 2px 5px;
+            -moz-box-shadow:inset 1px -1px 2px #e3e8ec, 1px 1px 0px #fff;
+            -webkit-box-shadow:inset 1px -1px 2px #e3e8ec, 0px 1px 0px #fff;
+            box-shadow:inset 1px -1px 2px #e3e8ec, 0px 1px 0px #fff;
+            width: 264px;
+            position: relative;
+            margin:0 auto;
+        }
+
+        .input-light-small input:focus{outline:0px aqua none;}
+
+        .input-light-small input {border: none; outline:none; width:264px;}
+
+    </style>
+  <script type="text/javascript" charset="UTF-8" src="//www.google.com/js/th/SUdiaCY6jH4b3dZl65iOKBdM6RP8EE5Op-iH6W7KEFM.js"></script><style type="text/css">
+
+.recaptcha_is_showing_audio .recaptcha_only_if_image,.recaptcha_isnot_showing_audio .recaptcha_only_if_audio,.recaptcha_had_incorrect_sol .recaptcha_only_if_no_incorrect_sol,.recaptcha_nothad_incorrect_sol .recaptcha_only_if_incorrect_sol{display:none !important}</style><script type="text/javascript" src="https://www.google.com/recaptcha/api/reload?c=03AHJ_VuvH77TBo26h5bSGjFy5K_FJ0uEGtIh99Z_WGp3DWgTaXVr7HW7MCZNs9grfCjfVqtZSj21Hb-pqwiFnVaRPuqg6Wof_uIhrlWpRhFBirKif-AnXqme44XZ0TH7m5_cqvVws3ZDsWJsf_oD7l_Ux46UeGanJ_wfPbOIzj-b8C6eGsxg-SQQFR44PO1Pen5w76_tTDJZbSuoBDPKpec8Ru4ufcOU3ag&amp;k=6Lc-TgwAAAAAALAAwEdL3ahmchYPnZI0XvSimWGm&amp;reason=i&amp;type=image&amp;lang=en&amp;th=,8bAdAyahrfovdrbE0UiVYlYkzPAAAAAToAAAAATYALXQBwuTjPkDXyX_GKYlvEROczuu9nBtk8mKI-Uf0KgBp9jGZ_ANZttW3WPtwuRD_9m8reZemZ8LqMkvriZy4SZhGVZ13lNSLTyYkBVAUu1QhQr_GZ2gVHEdhNcRqcKjYRfNP0tvwJ9YhTkoBlkuiLHOD1_ySyJY1kwBAE3PTsZEFgK0ALP0LNbsjrNB4lHOdwCsHGxweRpwYgXPfh0FKeiwpWcVg3gtqt3t5rj-lssKjHMG4IhF"></script></head>
+
+  <body class="site4shared notPremiumUser Mozilla pageCaptcha">
+
+  <div class="botHeader">
+      <div class="logo"></div>
+  </div>
+
+  <div class="botContent">
+    <h1>We have discovered suspicious activity from your computer network.</h1>
+      <h2>Please, enter the code below to continue</h2>
+
+    <form method="post" action="/web/acc/registerAfterReCaptcha">
+      <input type="hidden" value="" name="birthday" /><input type="hidden" value="" name="location" /><input type="hidden" value="" name="couponcode" /><input type="hidden" value="true" name="isregister" /><input type="hidden" value="1" name="lastname" /><input type="hidden" value="1" name="firstname" /><input type="hidden" value="1" name="password" /><input type="hidden" value="inviteFriend" name="typeMsg" /><input type="hidden" value="" name="birthyear" /><input type="hidden" value="1" name="password2" /><input type="hidden" value="home" name="action" /><input type="hidden" value="null" name="paramsFromPrevForm" /><input type="hidden" value="zmgufrmu@grr.la" name="login" /><input type="hidden" value="1" name="loadedpage" /><div style="" id="recaptcha_widget" class=" recaptcha_nothad_incorrect_sol recaptcha_isnot_showing_audio">
+        <div class="alignLeft">
+          <div id="recaptcha_image" style="width: 300px; height: 57px;"><img width="300" height="57" src="https://www.google.com/recaptcha/api/image?c=03AHJ_VuuUJyU7d1jaJRgKI_NkyMu4KkNQ_CDdeWqfQdRI50hXfkWU_sgF8RqJNelAGGJ7hSF6d7QbrODpxLyJ7TkGmjx44AJY5IVaJpLDBUt49uRAwofSGLXPwsYHxQUxnzvwQso2fliypE-ggUc7JkHN2Yo-E3qZjde23ihjZez5dYlIanYRy1CGXNv-tanHvm7n2fL7Z_RtjFnvC58A6xY5Y2HwnHQ0XQ&amp;th=,8bAdAyahrfovdrbE0UiVYlYkzPAAAAAToAAAAATYALXQBwuTjPkDXyX_GKYlvEROczuu9nBtk8mKI-Uf0KgBp9jGZ_ANZttW3WPtwuRD_9m8reZemZ8LqMkvriZy4SZhGVZ13lNSLTyYkBVAUu1QhQr_GZ2gVHEdhNcRqcKjYRfNP0tvwJ9YhTkoBlkuiLHOD1_ySyJY1kwBAE3PTsZEFgK0ALP0LNbsjrNB4lHOdwCsHGxweRpwYgXPfh0FKeiwpWcVg3gtqt3t5iz-YrG1jyDR5HL5" alt="reCAPTCHA challenge image" id="recaptcha_challenge_image" /></div>
+          <div id="controls">
+            <a href="javascript:Recaptcha.reload()">Reload image</a>
+            <a href="javascript:Recaptcha.showhelp()">Help</a>
+          </div>
+          <div class="clear"></div>
+        </div>
+
+        <div style="color:red" class="recaptcha_only_if_incorrect_sol">Wrong code entered. Please, try again.</div>
+        <p class="recaptcha_only_if_image marginB5">Enter the code above to post message:</p>
+        <div class="floatLeft">
+          <span id="recaptcha_challenge_field_holder" style="display: none;"><input type="hidden" value="03AHJ_VuuUJyU7d1jaJRgKI_NkyMu4KkNQ_CDdeWqfQdRI50hXfkWU_sgF8RqJNelAGGJ7hSF6d7QbrODpxLyJ7TkGmjx44AJY5IVaJpLDBUt49uRAwofSGLXPwsYHxQUxnzvwQso2fliypE-ggUc7JkHN2Yo-E3qZjde23ihjZez5dYlIanYRy1CGXNv-tanHvm7n2fL7Z_RtjFnvC58A6xY5Y2HwnHQ0XQ" id="recaptcha_challenge_field" name="recaptcha_challenge_field" /></span><input type="text" style="width:250px" name="recaptcha_response_field" id="recaptcha_response_field" class="input-gray-big wide round4" autocomplete="off" />
+        </div>
+
+        <div class="floatLeft marginL5">
+          <input type="submit" value="Confirm" class="submit-gray round4" />
+        </div>
+
+        <div class="clear"></div>
+      </div>
+
+      <script type="text/javascript">
+var RecaptchaOptions = {theme:'custom',lang:'en',custom_theme_widget:'recaptcha_widget'};
+</script>
+<script src="https://www.google.com/recaptcha/api/challenge?k=6Lc-TgwAAAAAALAAwEdL3ahmchYPnZI0XvSimWGm" type="text/javascript"></script><script src="https://www.google.com/recaptcha/api/js/recaptcha.js" type="text/javascript"></script>
+</form>
+
+      <h2 class="botSupport">If you think we are challenging you by mistake please write to our support:<span>support@4shared.com</span></h2>
+
+  </div>
+  
+</body></html>

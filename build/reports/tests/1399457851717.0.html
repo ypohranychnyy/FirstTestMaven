@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr"><head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+        <meta content="true" name="HandheldFriendly" />
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+
+        <title>✉ Guerrilla Mail - Disposable Temporary E-Mail Address</title>
+                <meta content="Don't want to give them your real email? Use a temporary email. No registration, lasts 60 mins. Protection from Spam" name="description" />
+
+        <link href="/js/jquery-ui/css/gm-theme/jquery-ui-1.10.3.custom.min.css" type="text/css" rel="stylesheet" />
+        <link href="/js/intro/introjs.min.css" type="text/css" rel="stylesheet" />
+        <link href="/css/gm.css" type="text/css" rel="stylesheet" />
+
+                <style>
+            .fancy-box {
+    webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .45), 0 1px 0 #FCFCFC inset;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, .45), 0 1px 0 #FCFCFC inset;
+    -ms-box-shadow: 0 1px 3px rgba(0, 0, 0, .45), 0 1px 0 #FCFCFC inset;
+    -o-box-shadow: 0 1px 3px rgba(0, 0, 0, .45), 0 1px 0 #FCFCFC inset;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .45), 0 1px 0 #FCFCFC inset;
+    font-family: Georgia;
+    background-color: #EBEBEB;
+    padding: 5px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 5px;
+    text-align: center;
+}
+.cut {
+	text-align: left;max-width: 600px; font-size: small;
+
+}
+a, a:visited {
+        text-decoration: none;
+    color: green;
+    font-weight: bold;
+
+}
+a:hover {
+        text-decoration: underline;
+}
+body {
+        font-family: Verdana, Geneva, sans-serif;
+}        </style>
+
+
+        <script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.uk.81uDXsAmqOI.O/m=auth/exm=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AItRSTNFJ9nFQ9yxS_Ss2ZRWx9_5uj9njA/cb=gapi.loaded_1" async=""></script><script src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.uk.81uDXsAmqOI.O/m=plusone/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AItRSTNFJ9nFQ9yxS_Ss2ZRWx9_5uj9njA/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="//api.viglink.com/api/vglnk.js"></script><script type="text/javascript" async="" src="https://apis.google.com/js/plusone.js" gapi_processed="true"></script><script id="twitter-wjs" src="//platform.twitter.com/widgets.js"></script><script async="" type="text/javascript" src="https://www.googletagservices.com/tag/js/gpt.js"></script><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script type="text/javascript">
+            //window.google_analytics_uacct = "UA-92645-24";
+
+            gm_init_vars = {
+                hasFlash: false,
+                ZeroSwf: '/flash/ZeroClipboard.swf',                 passwordJs: '/js/password.min.js',
+                ryoJs: '/js/ryo.js',
+                bitcoinJs: '/js/bitcoin.js',
+                                recaptchaJs: 'https://www.google.com/recaptcha/api/js/recaptcha_ajax.js',
+                base: '/',
+                tab: 'inbox',
+                assets: '/',
+                lang: 'en',
+                ajax_url: 'www.guerrillamail.com/ajax.php',
+                result: {"list":[{"mail_from":"no-reply@guerrillamail.com","mail_timestamp":0,"mail_read":0,"mail_date":"10:15:43","reply_to":"","mail_subject":"Welcome to Guerrilla Mail","mail_excerpt":"Dear Random User,\r\n\r\nThank you for using Guerrilla Mail - your temporary email address friend and spam fighter's ally!\r\n\r\nYour disposable email address has been created ready for use.\r\n\r\nEmail: nurumm","mail_id":1,"att":0,"content_type":"text","mail_recipient":"nurummxr","source_id":0,"source_mail_id":0}],"count":"0","email":"nurummxr@guerrillamailblock.com","alias":"de0k7y3+fipayk","ts":1399457743,"sid_token":"g0p7an4heen46336htpkpqjgp0","stats":{"sequence_mail":"7,565,676","created_addresses":38163242,"received_emails":"1,437,687,167","total":"1,430,121,491","total_per_hour":"71206"}},
+                email_addr: 'nurummxr@guerrillamailblock.com',
+                alias: 'de0k7y3+fipayk',
+                use_alias: true,
+                email_timestamp: 1399457743,
+                domain: 'guerrillamail.com',
+                limit: 20,
+                display_host: 'sharklasers.com',
+                recaptcha_pub: '6LcIHdESAAAAALVQtprzwjt2Rq722tkxk-RDQ0aN',
+                row_template: "&lt;tr style=\"%HIDDEN_STYLE%\" class=\"mail_row %UNREAD_CLASS%\" id=\"mr_%MAIL_ID%\" data-seq=\"%MAIL_ID%\"&gt;  &lt;td class=\"td1\"&gt;&lt;input type=\"checkbox\" name=\"mid[]\" value=\"%MAIL_ID%\"&gt;&lt;\/td&gt; &lt;td class=\"td2\"&gt;%MAIL_FROM% &lt;\/td&gt;   &lt;td class=\"td3\"&gt; &amp;nbsp;%ATTACH%%MAIL_SUBJECT% &lt;span class=\"email-excerpt\"&gt;%MAIL_EXCERPT%&lt;\/span&gt;&lt;\/td&gt; &lt;td class=\"td4\"&gt;%MAIL_DATE%&lt;\/td&gt;&lt;\/tr&gt;",
+                stats_template: "Avoid spam and stay safe - use a disposable email address! Click the \"WTF\" button below for help. So far we've processed &lt;b&gt;%RECEIVED_EMAILS% emails%DIFF%&lt;\/b&gt;, \nKeeping your real inbox safe and clean (%TOTAL_PER_HOUR% emails going in \/ hour)",
+                no_emails_template: "&lt;tr class=\"no_emails\"&gt;&lt;td colspan=\"4\"&gt;There are no emails present in the inbox right now. &lt;\/td&gt;&lt;\/tr&gt;",
+                email_template: "&lt;div class=\"email_page\"&gt;&lt;div class=\"email_controls tab-active-space\"&gt;\n            &lt;a id=\"back_to_inbox_link\" class=\"button small\" rel=\"nofollow\" href=\"%INBOX_LINK%\" &gt;\u00ab Back to inbox&lt;\/a&gt; &amp;nbsp;\n            &lt;a id=\"reply_link\" class=\"button small\" rel=\"nofollow\" href=\"%REPLY_LINK%\" &gt;Reply&lt;\/a&gt; &amp;nbsp;\n            &lt;a id=\"forward_link\" class=\"button small\" rel=\"nofollow\" href=\"%FORWARD_LINK%\" &gt;Forward&lt;\/a&gt; &amp;nbsp;\n            &lt;a id=\"show_original_link\" rel=\"nofollow\" class=\"button small\" href=\"%SRC_LINK%\" target=\"_new\" &gt;Show Original&lt;\/a&gt; &amp;nbsp;\n            &lt;a id=\"display_images\" style=\"display: none\" class=\"button small\" rel=\"nofollow\" href=\"#\"  &gt;Display Images&lt;\/a&gt;&lt;\/div&gt;&lt;div class=\"email\" data-ref-mid=\"%REF_MID%\"&gt;&lt;h3 class=\"email_subject\"&gt;%MAIL_SUBJECT%&lt;\/h3&gt;%ATTACH%&lt;p&gt;From: &lt;strong data-reply-to=\"%REPLY_TO%\" class=\"email_from\"&gt;%MAIL_FROM%&lt;\/strong&gt;, To: &lt;strong class=\"email_to\"&gt;%MAIL_TO%&lt;\/strong&gt;, Date &lt;strong class=\"email_date\"&gt;%MAIL_DATE%&lt;\/strong&gt;&lt;\/p&gt;&lt;div class=\"email_body\"&gt;%MAIL_BODY%&lt;\/div&gt;&lt;\/div&gt;&lt;\/div&gt;",
+                file_list_template: "&lt;li data-filename=\"%FILENAME%\" data-size=\"%SIZE%\" data-media-id=\"%MEDIA_ID%\" data-access-key=\"%ACCESS_KEY%\"&gt; &lt;input id=\"file-cbox-%MEDIA_ID%\" class=\"file-cbox\" type=\"checkbox\" checked&gt;&lt;label class=\"file-cboxlabel\" for=\"file-cbox-%MEDIA_ID%\"&gt;%FILENAME% %SIZE_STR%&lt;\/label&gt;&lt;\/li&gt;",
+                att_template: "&lt;p&gt;Warning: Guerrilla Mail doesn't scan files for malware. You open attached files at your own risk&lt;\/p&gt;&lt;ul id=\"gm-attach\" class=\"attach\"&gt;%ATT_LIST%&lt;\/ul&gt;",
+                att_file_template: "&lt;li class=\"attach-file\"&gt;Attached file: %ATT_FILE%&lt;\/li&gt;",
+                change_logo_on:  true             };
+
+            gm_lang = {
+
+                label: {
+
+                    inline_placeholder: "hey, u can edit",
+inline_button_cancel: "cancel",
+inline_button_set: "Set",
+status_alert_forgetme: "Forget me - request sent to the server.",
+forgetten_alert: "Your address was forgotten. Please enter a new address or refresh the page",
+copied_to_clip: "Copied text to clipboard:",
+delete_sent: "One moment, sending a delete command to the server...",
+reload_error: "there was an error re-loading the list",
+hold_on: "Hold on...",
+done: "Done.",
+new_mail: "You've Got New Mail (%length%)",
+next_update: "Next update in: %count% sec.",
+delete_error: "There was an error deleting the email, please try again later",
+fetch_older_error: "There was an error fetching the older emails, please try again later",
+loading: "loading...",
+fetch_email_error: "There was an error fetching the email, please try again later",
+already_deleted: "Sorry, it appears that this email was deleted.",
+set_email_error: "There was an error setting an email, please try again later",
+email_set: "Email set to &lt;b&gt;%email%&lt;\/b&gt;",
+ready: "GuerrillaMail TEMP EMAIL SYSTEM - 38911 BYTES FREE. READY.",
+days: "days",
+hrs: "hrs",
+min: "min",
+sec: "sec",
+domain_changed: "Domain changed to %DOMAIN%, actually, emails for all of these domains will arrive here!",
+checking: "Checking...",
+sending: "Sending...",
+connect_error: "Error, connection to the server lost",
+send_to_invalid: "Invalid email address.",
+send_from_invalid: "Invalid from address.",
+send_subject_invalid: "Subject is blank.",
+send_body_invalid: "Body is blank.",
+captcha_incorrect: "Captcha was incorrect, please re-try",
+send_completed: "Message dispatched",
+invalid_stamp: "Invalid stamp",
+upload_status: "uploading, rec:%RECEIVED% size: %SIZE% percent: %PERCENT%",
+reply_on: "On %DATE% %EMAIL% wrote:",
+reply_subject: "Re: %SUBJECT%",
+forward_msg: "Forwarded message",
+forward_from: "From: %FROM%",
+forward_date: "Date: %DATE%",
+forward_to: "To: %EMAIL%",
+forward_body_subject: "Subject:  %SUBJECT%",
+forward_subject: "Fwd:  %SUBJECT%",
+captcha_instructions_visual: "Type the two words",
+captcha_instructions_audio: "Type what you hear:",
+captcha_play_again: "Play sound again",
+captcha_cant_hear_this: "Download sound as MP3",
+captcha_visual_challenge: "Get a visual challenge",
+captcha_audio_challenge: "Get an audio challenge",
+captcha_refresh_btn: "Get a new challenge",
+captcha_help_btn: "Help",
+captcha_incorrect_try_again: "Incorrect. Try again.",
+captcha_instructions_context: "Type the words in the boxes:",
+captcha_image_alt_text: "reCAPTCHA challenge image"
+                }
+            };
+
+        </script>
+
+                    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+            <script>window.jQuery || document.write('&lt;script src="/js/jquery.js"&gt;\x3C/script&gt;')</script>
+            
+        <script src="/js/jquery.address-1.6.min.js?strict=false&amp;state=" type="text/javascript"></script>
+        <script src="/js/jquery.inlineedit.js" type="text/javascript"></script>
+        <script src="/js/ZeroClipboard.js" type="text/javascript"></script>
+        <script src="/js/gm.js" type="text/javascript"></script>
+                <script src="/js/jquery-ui/js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+        <script src="/js/intro/intro.min.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+
+                $(".js_only").removeClass('js_only'); // unhide stuff we use for the javascript version
+                //$("#set_email_form").remove();
+
+                gm_init();
+                
+
+            });
+
+        </script>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-92645-24']);
+            _gaq.push(['_trackPageview']);
+            (function () {
+                var ga = document.createElement('script');
+                ga.type = 'text/javascript';
+                ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        <script type="text/javascript">
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function () {
+            var gads = document.createElement('script');
+            gads.async = true;
+            gads.type = 'text/javascript';
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+                '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+        </script>
+
+    <script type="text/javascript">
+        googletag.cmd.push(function () {
+                googletag.defineSlot('/1006583/Guerrilla-Mail-banner', [728, 90], 'div-gpt-ad-1366856314375-0').addService(googletag.pubads());
+                googletag.pubads().enableSingleRequest();
+                googletag.enableServices();
+            });
+    </script>    <script async="" type="text/javascript" src="https://partner.googleadservices.com/gpt/pubads_impl_38.js"></script></head>
+    <body data-twttr-rendered="true">
+
+        <div id="logo" class="logo">
+        <a href="/"><img src="https://img.guerrillamail.com/8/8/2/88204d7bcd59b05566a983720897d8f6.png" alt="✉ Guerrilla Mail - Disposable Temporary E-Mail Address" /></a>
+    </div>
+
+
+    <h3 class="heading opaque-box">Guerrilla Mail - Disposable Temporary E-Mail Address</h3>
+    <div class="opaque-box" id="stats">
+
+        <div class="inner ">Avoid spam and stay safe - use a disposable email address! Click the "WTF" button below for help. So far we've processed <b>1,437,687,690 emails <span class="increase">(+218)</span></b>, 
+Keeping your real inbox safe and clean (70824 emails going in / hour)</div>
+
+    </div>
+    
+        <div style="width:800px; margin: auto; text-align: center;">
+            <script src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async=""></script>
+            <!-- gm - leaderboard (nov 2013) -->
+            <ins data-ad-slot="1155774529" data-ad-client="ca-pub-3636152504700635" style="display:inline-block;width:728px;height:90px" class="adsbygoogle" data-adsbygoogle-status="done"><ins style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent" id="aswift_0_anchor"><iframe width="728" scrolling="no" height="90" frameborder="0" style="left:0;position:absolute;top:0;" name="aswift_0" id="aswift_0" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" allowtransparency="true" hspace="0" vspace="0" marginheight="0" marginwidth="0"></iframe></ins></ins></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <div id="guerrilla_mail">
+
+        
+        <div style="margin: auto" class="show_address">
+            <!--
+            <div class="col1" style="float:left; width: 20%; text-align: right; ">
+                <img src="/img/arrow.png">
+            </div>
+            -->
+            <div style="" class="col2">
+    <span data-step="1" data-intro="This is your Inbox ID, there's no signup or passwords. You may change your Inbox ID to whatever you like. You may choose alternative domains too, all email will arrive to the same inbox below. All addresses last forever, and anyone can access it if they know this Inbox ID. Email messages are held for one hour before they are deleted, if you check them or not." class="strong" dir="ltr"> <span id="inbox-id" class="editable button" title="Click to Edit">nurummxr</span> @
+        
+        <select class="strong" id="gm-host-select">
+            <option value="guerrillamail.com">guerrillamail.com</option><option value="guerrillamailblock.com">guerrillamailblock.com</option><option value="sharklasers.com">sharklasers.com</option><option value="guerrillamail.net">guerrillamail.net</option><option value="guerrillamail.org">guerrillamail.org</option><option value="guerrillamail.biz">guerrillamail.biz</option><option value="spam4.me">spam4.me</option><option value="grr.la">grr.la</option><option value="guerrillamail.de">guerrillamail.de</option>        </select>
+            
+
+    </span>
+             
+            
+                <a href="/?fgt=1" rel="nofollow" id="forget_button" class="button small">Forget Me</a>
+                                    <a id="help" class="button small" href="#">WTF?</a>
+                            <br />
+            <span data-step="2" data-intro="This is the email address you give out. It is a scrambled version of nurummxr@sharklasers.com - so it will be harder to guess which Inbox Id was used. (It's best to choose a uniquely random Inbox ID)." class="outline" id="email-widget" style="width: 240px;"><span value="de0k7y3+fipayk@sharklasers.com" readonly="readonly" style="border: 0px none; background-color: whitesmoke; width: 240px;" type="text" dir="ltr" id="show-email">de0k7y3+fipayk@sharklasers.com</span></span>
+
+            <!-- <span dir="ltr" class="strong js_only"><span id="alias">de0k7y3+fipayk</span>@ -->
+            
+
+            <span id="copy-to-clip-container">
+        <span id="copy_to_clip" class="button small copy-clip">Copy to clipboard</span>
+    </span>
+            <span class="" id="alias-box">
+                     <input type="checkbox" value="1" id="use-alias" name="alias" checked="checked" /><label for="use-alias"><img width="16" height="16" src="/img/mask-alias.png" /> Scramble Address</label>
+    </span>
+
+
+
+
+
+            <noscript>
+                &lt;div style="display: inline"&gt;
+                    &lt;form id="set_email_form" method="POST" action="/"&gt;
+                        Inbox ID: &lt;input class="outline" size="15" type="text" name="set_email"
+                                         value="nurummxr"&gt;
+                        &lt;input type="submit" class="button" name="set_email_button"
+                               value="Set"&gt; &lt;a class="button small"
+                                                                                        id="forget_button"
+                                                                                        rel="nofollow"
+                                                                                        href="/?fgt=1"&gt;Forget Me&lt;/a&gt;&lt;br&gt;
+                        Your Email Address is: &lt;br&gt;&lt;input class="outline" disabled size="45" type="text"
+                                                          name="show_email"
+                                                          value="de0k7y3+fipayk@guerrillamailblock.com"&gt;
+                    &lt;/form&gt;
+                &lt;/div&gt;
+                &lt;a class="button small" id="refresh_button" rel="nofollow"
+                   href="/?r=1"&gt;Refresh Inbox&lt;/a&gt;
+            </noscript>
+            <br />
+                        </div>
+
+        </div>
+
+        
+        <div id="tab_bar">
+            <ul>
+                                    <li class="nav_item nav_not_active  current_nav_item tab-active-space" id="nav-item-inbox">
+                        <a href="/inbox" title="Email" class="nav_not_active_a">Email</a>
+                    </li>
+                                    <li class="nav_item nav_not_active" id="nav-item-compose">
+                        <a href="/compose" title="Compose" class="nav_not_active_a">Compose</a>
+                    </li>
+                                    <li class="nav_item nav_not_active" id="nav-item-tools">
+                        <a href="/tools" title="Tools" class="nav_not_active_a">Tools</a>
+                    </li>
+                                    <li class="nav_item nav_not_active" id="nav-item-bitcoin">
+                        <a href="/bitcoin" title="Bitcoin" class="nav_not_active_a">Bitcoin</a>
+                    </li>
+                                    <li class="nav_item nav_not_active" id="nav-item-about">
+                        <a href="/about" title="About" class="nav_not_active_a">About</a>
+                    </li>
+                            </ul>
+            <div class="clear"></div>
+        </div>
+                <div data-title="✉ Guerrilla Mail - Disposable Temporary E-Mail Address" class="tab_content active_tab loaded" id="inbox">
+
+
+                <div style="" id="display_email"><div class="email_page"><div class="email_controls tab-active-space">
+            <a href="#inbox" rel="nofollow" class="button small" id="back_to_inbox_link">« Back to inbox</a>  
+            <a href="?t=compose&amp;action=r&amp;mid=52967133" rel="nofollow" class="button small" id="reply_link">Reply</a>  
+            <a href="?t=compose&amp;action=f&amp;mid=52967133" rel="nofollow" class="button small" id="forward_link">Forward</a>  
+            <a target="_new" href="?show_source=52967133" class="button small" rel="nofollow" id="show_original_link">Show Original</a>  
+            <a href="#" rel="nofollow" class="button small" style="" id="display_images">Display Images</a></div><div data-ref-mid="52967133:d6170fd5611c5a4e1e3dacb1dce21f452c3f801f" class="email"><h3 class="email_subject">invite has invited you to 4shared</h3><p>From: <strong class="email_from" data-reply-to="invite@grr.la">no-reply@mx2.4shared.com</strong>, To: <strong class="email_to">nurummxr</strong>, Date <strong class="email_date">2014-05-07 10:16:05</strong></p><div class="email_body"><table width="100%" cellspacing="0" cellpadding="0" style="font-family:Arial, sans-serif;background:#fafafa;"><tbody><tr><td>
+      
+      <div style="margin:0 auto;padding:5% 0;">
+
+        <table width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #cccccc;background:#ffffff;"><tbody><tr><td style="background-color:#ffffff;color:#0b80bd;">
+              <img alt="4shared-top-gradient.png" src="/res.php?r=1&amp;n=img&amp;q=https%3A%2F%2Fstatic.4shared.com%2Fimages%2Femail%2F4shared-top-gradient.png" /><img alt="Please, click 'Enable images'" src="/res.php?r=1&amp;n=img&amp;q=https%3A%2F%2Fstatic.4shared.com%2Fimages%2Femail%2F4shared-logo.png" /></td>
+          </tr><tr><td valign="top" style="padding:10px 30px 15px 42px;">
+              <b>Hello!</b>
+            </td>
+          </tr><tr><td valign="top" style="padding:3px 30px 10px 42px;">
+                  <span style="color:#4f5f6f;font-size:13px;">
+                       invite has invited you to 4shared.
+                  </span>
+            </td>
+          </tr><tr><td valign="top" style="padding:10px 30px 20px 42px;">
+                  <span style="color:#4f5f6f;font-size:13px;">
+                    4shared let you store your files, share them easily with your friends moreover you will get 15GB of Free Space today!
+                  </span>
+            </td>
+          </tr><tr><td valign="top" style="padding:0 30px 15px 42px;">
+              <i>I has invited you to 4shared</i>
+            </td>
+          </tr><tr><td valign="top" style="padding:10px 30px 20px 42px;">
+              <a href="https://www.4shared.com/web/contacts/acceptinvite?param=jXVpOUbNCXpeHP7BkRyUiJdDoLVI6CyDLZ2rJvOdOKY3Sv437XKDQ6KpSumKD_EXrQ" target="_blank">Accept Invite</a>
+            </td>
+          </tr><tr><td valign="top" style="padding:0 30px 20px 42px;">
+              <br /><i>The 4shared Team </i>
+            </td>
+          </tr><tr><td valign="top" style="padding:0 30px 0 42px;">
+              <table width="100%" cellspacing="0" cellpadding="0" style="border-top:1px dotted #e1e2e3;"><tbody><tr><td style="padding:15px 0;">
+                    <span style="color:#8a8a8a;font-size:11px;">
+                      This is an automated e-mail message, please do not reply directly. You can contact us by sending an e-mail to <a href="mailto:support@4shared.com" target="_blank">support@4shared.com</a>.
+                    </span>
+                  </td>
+                </tr></tbody></table></td>
+          </tr></tbody></table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="padding:5px 0 15px 0;text-align:center;">
+              <div style="font-size:14px;color:#919191;margin:5px 0;">
+                Access your files from anywhere
+              </div>
+              <a href="https://market.android.com/details?id=com.forshared" target="_blank">
+                <img width="155" height="50" border="0" alt="4shared for Android" src="/res.php?r=1&amp;n=img&amp;q=https%3A%2F%2Fstatic.4shared.com%2Fimages%2Femail%2Femail-moblink-android.png" /></a>
+              
+              <a href="https://play.google.com/store/apps/details?id=com.forshared.pro" target="_blank">
+                <img width="155" height="50" border="0" alt="4shared Pro for Android" src="/res.php?r=1&amp;n=img&amp;q=https%3A%2F%2Fstatic.4shared.com%2Fimages%2Femail%2Femail-moblink-android-pro.png" /></a>
+              
+              <a href="http://itunes.apple.com/us/app/4shared-sync/id444426162?mt=8&amp;ls=1" target="_blank">
+                <img width="155" height="50" border="0" alt="4shared for iPhone" src="/res.php?r=1&amp;n=img&amp;q=https%3A%2F%2Fstatic.4shared.com%2Fimages%2Femail%2Femail-moblink-iphone.png" /></a>
+            </td>
+          </tr></tbody></table><table width="100%" cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="padding-top:10px;border-top:1px #dfdfdf solid;">
+              <span style="color:#7a7a7a;font-size:11px;font-family:Tahoma, sans-serif;">©2013 4shared. ALL RIGHTS RESERVED.</span>
+            </td>
+          </tr></tbody></table></div>
+      
+    </td>
+  </tr></tbody></table></div></div></div></div>
+        <div title="POP Access" id="pop-dialog">
+        <div id="pop-panel"></div>
+        Setup pop access<br />
+        Email: something@grr.la<br />
+        Pass: get one<br />
+        POP3 Server: pop.grr.la<br />
+        Port: 995<br />
+        SMTP Port: 587
+            </div>
+
+    <form action="/" method="POST" class="email_list_form">
+        <table data-step="3" data-intro="New mail arrives here. You can click on the confirmation links, open attachments, view the original source, reply and more. All mail arrives here, including potential spam. Spam that would otherwise go to you!" data-position="top" id="email_table" style="display: none;">
+            <caption class="email_list_caption">
+                <div class="email_controls tab-active-space">
+                    <input type="submit" id="del_button" value="Delete" class="button" />
+                    <input type="submit" id="pop-button" value="POP Settings" class="button" style="display: none;" /><span id="tick">Next update in: 3 sec.</span>
+                </div>
+
+            </caption>
+
+            <colgroup>
+                <col class="c1" />
+                <col class="c2" />
+                <col class="c3" />
+                <col class="c4" />
+            </colgroup>
+            <tbody id="email_list"><tr data-seq="52967133" id="mr_52967133" class="mail_row  pointer click-set" style="">  <td class="td1"><input type="checkbox" value="52967133" name="mid[]" /></td> <td class="td2">no-reply@mx2.4shared.com </td>   <td class="td3">  invite has invited you to 4shared <span class="email-excerpt">
+      
+      
+
+        </span></td> <td class="td4">10:16:05</td></tr>
+            <tr data-seq="1" id="mr_1" class="mail_row  email_unread pointer click-set" style="">  <td class="td1"><input type="checkbox" value="1" name="mid[]" /></td> <td class="td2">no-reply@guerrillamail.com </td>   <td class="td3">  <a title="View mail #1" href="/inbox?mail_id=1" rel="nofollow" class="masked_links">Welcome to Guerrilla Mail</a> <span class="email-excerpt">Dear Random User,
+
+Thank you for using Guerrilla Mail - your temporary email address friend and spam fighter's ally!
+
+Your disposable email address has been created ready for use.
+
+Email: nurumm</span></td> <td class="td4">10:15:43</td></tr>
+
+            </tbody>
+        </table>
+    </form>
+
+        </div>
+            <div data-title="Compose Email" class="tab_content hidden_tab" id="compose">
+
+
+            <div class="loading-tab"><img width="120" height="15" alt="Loading" src="/img/page-loader.gif" /></div>
+        </div>
+            <div data-title="Tools" class="tab_content hidden_tab" id="tools">
+
+
+            <div class="loading-tab"><img width="120" height="15" alt="Loading" src="/img/page-loader.gif" /></div>
+        </div>
+            <div data-title="Send / receive bitcoins" class="tab_content hidden_tab" id="bitcoin">
+
+
+            <div class="loading-tab"><img width="120" height="15" alt="Loading" src="/img/page-loader.gif" /></div>
+        </div>
+            <div data-title="About Guerrilla Mail" class="tab_content hidden_tab" id="about">
+
+
+            <div class="loading-tab"><img width="120" height="15" alt="Loading" src="/img/page-loader.gif" /></div>
+        </div>
+    
+
+        
+
+    </div>
+
+    <div style="margin-top: 15px;" class="fancy-box">
+    <div data-step="4" data-intro="One small thing before you go... we would appreciate if you could give our service your valued approval. Thanks!" data-position="top">
+    	<div><br /></div>
+    	<div style="margin-left: 130px;" class="badge-box">
+
+            <iframe scrolling="no" frameborder="0" id="twitter-widget-0" allowtransparency="true" src="https://platform.twitter.com/widgets/tweet_button.1399334259.html#_=1399457832645&amp;count=horizontal&amp;dnt=true&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=https%3A%2F%2Fwww.guerrillamail.com%2F&amp;size=l&amp;text=Don%27t%20want%20to%20give%20them%20your%20real%20email%3F%20Use%20a%20temporary%20email.%20No%20registration%2C%20lasts%2060%20mins.&amp;url=https%3A%2F%2Fwww.guerrillamail.com&amp;via=guerrillamail" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 138px; height: 28px;"></iframe>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+        <div class="badge-box">
+
+            <script type="text/javascript">reddit_url='https://www.guerrillamail.com/'; reddit_title = "Temporary email";</script>
+            <!-- <script type="text/javascript" src="https://www.reddit.com/static/button/button3.js"></script> -->
+            <iframe width="69" scrolling="no" height="52" frameborder="0" src="https://redditstatic.s3.amazonaws.com/button/button3.html?width=69&amp;url=https%3A%2F%2Fwww.guerrillamail.com%2F&amp;title=SharkLasers%20if%20you%20don%27t%20want%20to%20give%20out%20your%20email"></iframe>
+        </div>
+
+         <div class="badge-box">
+
+            <iframe scrolling="no" frameborder="0" allowtransparency="true" style="border:none; overflow:hidden; width:45px; height:90px;" src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FGuerrillaMail&amp;send=false&amp;layout=box_count&amp;width=45&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=90&amp;appId=111720662225988"></iframe>
+        </div>
+
+        <div class="badge-box">
+
+            <div style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 50px; height: 60px;" id="___plusone_0"><iframe width="100%" scrolling="no" frameborder="0" hspace="0" marginheight="0" marginwidth="0" style="position: static; top: 0px; width: 50px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 60px;" tabindex="0" vspace="0" id="I0_1399457832658" name="I0_1399457832658" src="https://apis.google.com/_/+1/fastbutton?usegapi=1&amp;size=tall&amp;origin=https%3A%2F%2Fwww.guerrillamail.com&amp;url=https%3A%2F%2Fwww.guerrillamail.com%2F&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.uk.81uDXsAmqOI.O%2Fm%3D__features__%2Fam%3DAQ%2Frt%3Dj%2Fd%3D1%2Fz%3Dzcms%2Frs%3DAItRSTNFJ9nFQ9yxS_Ss2ZRWx9_5uj9njA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1399457832658&amp;parent=https%3A%2F%2Fwww.guerrillamail.com&amp;pfname=&amp;rpctoken=26314834" data-gapiattached="true" title="+1"></iframe></div>
+
+
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+        </div>
+        <br style="clear: both" />
+
+	<div style="text-align: center; max-width: 600px; margin: auto; margin-bottom:20px">Donate BTC: <a style="font-size:0.8em;" href="bitcoin:16AeokboiDcpxziMjMKj4WNhWrWAgwqYmD">16AeokboiDcpxziMjMKj4WNhWrWAgwqYmD</a><br />
+	<img src="https://www.guerrillamail.com/qr-code.php?t=1391906778&amp;addr=16AeokboiDcpxziMjMKj4WNhWrWAgwqYmD&amp;amount=&amp;label=GuerrillaMail" />
+</div>
+
+    </div>
+    </div>
+    <div class="opaque-box" id="copyright"><br />
+        guerrillamail.com is an anti-spam weapon of choice!<br /> Copyright 2006 - 2014 | <a href="/tos">Terms of Service</a> | <a href="http://www.guerrillamail.com/GuerrillaMailAPI.html">
+                API</a> | <a href="m/">Mobile!</a> | <a href="https://grr.la/ryo/guerrillamail.com/edit">Edit</a>
+        
+        <p>
+            Language:  <b>English</b> | <a href="/es/">Español</a> | <a href="/fr/">Français</a> | <a href="/it/">Italiano</a> | <a href="/de/">Deutsch</a> <br /> <a href="/nl/">Nederlands</a> | <a href="/pt/">Português</a> | <a href="/ru/">Русский</a> | <a href="/tr/">Türkçe</a> | <a href="/uk/">Українське</a> <br /> <a href="/ar/">العربية</a> | <a href="/ko/">한국어</a> | <a href="/jp/">日本語</a> | <a href="/zh/">简体中文</a> | <a href="/zh-hant/">繁體中文</a> <br />        </p>
+
+    </div>
+
+
+
+    <script type="text/javascript">
+        var vglnk = { api_url: '//api.viglink.com/api',
+            key: 'fea20e3219a929f8dfe79b8d6a019f90' };
+
+(function (d, t) {
+    var s = d.createElement(t);
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = ('https:' == document.location.protocol ? vglnk.api_url :
+            '//cdn.viglink.com/api') + '/vglnk.js';
+    var r = d.getElementsByTagName(t)[0];
+    r.parentNode.insertBefore(s, r);
+}(document, 'script'));
+</script>    
+    
+<div id="global-zeroclipboard-html-bridge" class="global-zeroclipboard-container" data-clipboard-ready="true" style="position: absolute; left: -9999px; top: -9999px; width: 15px; height: 15px; z-index: 9999;">    <object width="100%" height="100%" id="global-zeroclipboard-flash-bridge" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">       <param value="/flash/ZeroClipboard.swf?nocache=1399457832562" name="movie" />       <param value="always" name="allowScriptAccess" />       <param value="exactfit" name="scale" />       <param value="false" name="loop" />       <param value="false" name="menu" />       <param value="best" name="quality" />       <param value="#ffffff" name="bgcolor" />       <param value="transparent" name="wmode" />       <param value="" name="flashvars" />       <embed width="100%" height="100%" scale="exactfit" flashvars="" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" type="application/x-shockwave-flash" allowfullscreen="false" allowscriptaccess="always" name="global-zeroclipboard-flash-bridge" bgcolor="#ffffff" quality="best" menu="false" loop="false" src="/flash/ZeroClipboard.swf?nocache=1399457832562" />            </object></div><iframe name="oauth2relay1427858715" id="oauth2relay1427858715" src="https://accounts.google.com/o/oauth2/postmessageRelay?parent=https%3A%2F%2Fwww.guerrillamail.com#rpctoken=411324452&amp;forcesecure=1" style="width: 1px; height: 1px; position: absolute; top: -100px;" tabindex="-1"></iframe></body><iframe style="display: none;" src=""></iframe></html>

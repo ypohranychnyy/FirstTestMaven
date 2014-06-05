@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <title>4shared.com - free file sharing and storage - Settings</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="Online file sharing and storage - 15 GB free web space. Easy registration. File upload progressor. Multiple file transfer. Fast download." name="Description" />
+    <meta content="file sharing, free web space, online storage, share files, photo image music mp3 video sharing, dedicated hosting, enterprise sharing, file transfer, file hosting" name="Keywords" />
+    <link href="https://static.4shared.com/css/common_n.4min.css?ver=1697530900" type="text/css" rel="stylesheet" />
+<link href="https://static.4shared.com/css/ui/elements.4min.css?ver=2234389236" type="text/css" rel="stylesheet" />
+<link href="https://static.4shared.com/auth-popup.4min.css?ver=1613217610" type="text/css" rel="stylesheet" />
+<link href="https://static.4shared.com/css/themes/account/icons.4min.css?ver=3229227292" type="text/css" rel="stylesheet" />
+<link href="https://static.4shared.com/css/tipTip.4min.css?ver=3725259782" type="text/css" rel="stylesheet" />
+<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(function () {
+      $.ajaxPrefilter(function (options, originalOptions, jqXHR) {
+        if (!$.cookie) return
+        if (originalOptions.crossDomain &amp;&amp; originalOptions.url.search(".4shared.com") == -1) return;
+        var cookie = $.cookie('Login')
+        if (cookie) jqXHR.setRequestHeader("x-security", cookie);
+      })
+    })
+  </script>
+
+  <script type="text/javascript">
+  function Config() {
+    return this
+  }
+  document.domain='4shared.com';
+</script>
+
+<script type="text/javascript">
+  Config.mainSiteUrlPath = 'http://www.4shared.com/';
+  Config.mainSiteUrlHttpsPath  = 'https://www.4shared.com/';
+  Config.isRTLLanguage = false;
+  Config.currentLanguage = 'en';
+  Config.isReplaceSearchNameForSeo = false;
+  Config.revisionNum = 43021;
+  Config.syncDomain = 'https://www.4sync.com/';
+  Config.cdDomain = 'https://dc401.4shared.com/';
+  Config.mailPatterrn = new RegExp("^[_A-Za-z0-9-]+(?:\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(?:\\.[A-Za-z0-9-]+)+$");
+  Config.isMobile = false;
+  Config.isIpad = false;
+  Config.is4Sync = false;
+  Config.isUserLoggedIn = true;
+  Config.cookieDomain = (function(){
+    var domain = document.domain;
+    var splited = domain.split(".");
+    if(splited.length&gt;2){
+      splited = splited.splice(splited.length-2, splited.length);
+    }
+    return "."+splited.join(".");
+  })();
+
+  $(function(){
+      //lets detect touch device
+      try{
+          document.createEvent("TouchEvent");
+        if (window.opera &amp;&amp; !/Opera Mobi/.test(navigator.userAgent) &amp;&amp; !/Opera Mini/.test(navigator.userAgent)) $("body").addClass("notTouch");
+      } catch(e){
+          $("body").addClass("notTouch");
+      }
+  });
+
+
+  
+  function selectLang(lang){
+    $.post("/web/user/language",{code:lang}, // save langCode into UserEntity
+        function (data) {
+          if (data.status = 'ok') {
+            document.cookie = '4langcookie='+lang+'; path=/; domain=' + encodeURIComponent(Config.cookieDomain);
+            window.location.reload();
+          }
+        })
+  }
+</script><script src="https://static.4shared.com/js/plugins/favicon.4min.js?ver=2935847171" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/header.4min.js?ver=300176007" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/purchaseStats.4min.js?ver=2455068936" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/login_fnc.4min.js?ver=1858177710" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/authScripts.4min.js?ver=481603542" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/webtoolkit.base64.4min.js?ver=328333924" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/ajaxSuggestions.4min.js?ver=769630040" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/play.4min.js?ver=174540430" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/tips.4min.js?ver=1053751440" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/cookie.4min.js?ver=355701517" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/swfobject.4min.js?ver=1822999650" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/adlogger_tracker.4min.js?ver=803098674" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/plugins/jquery.jsonWithError.4min.js?ver=2371165281" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/smallPlugins.4min.js?ver=3810824795" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/utils.4min.js?ver=239756254" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/Events.4min.js?ver=957096448" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/plugins/jquery.placeholder.patch.4min.js?ver=4145716651" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/plugins/jquery.cookie.4min.js?ver=1439298453" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/plugins/jquery.localStorage.4min.js?ver=798000114" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/plugins/jquery.slimscroll.min.js?ver=4115156213" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/plugins/jquery.tipTip.4min.js?ver=142418924" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/json2.4min.js?ver=1033538422" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/plugins/jquery.cycle.all.min.js?ver=3581432058" type="text/javascript"></script>
+<!--71248779-->
+    <!-- Google Website Optimizer Control Script -->
+    <script>
+    function utmx_section(){}function utmx(){}
+    (function(){var k='2797291832',d=document,l=d.location,c=d.cookie;function f(n){
+    if(c){var i=c.indexOf(n+'=');if(i&gt;-1){var j=c.indexOf(';',i);return escape(c.substring(i+n.
+    length+1,j&lt;0?c.length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;
+    d.write('&lt;sc'+'ript src="'+
+    'http'+(l.protocol=='https:'?'s://ssl':'://www')+'.google-analytics.com'
+    +'/siteopt.js?v=1&amp;utmxkey='+k+'&amp;utmx='+(x?x:'')+'&amp;utmxx='+(xx?xx:'')+'&amp;utmxtime='
+    +new Date().valueOf()+(h?'&amp;utmxhash='+escape(h.substr(1)):'')+
+    '" type="text/javascript" charset="utf-8"&gt;&lt;/sc'+'ript&gt;')})();
+    </script><script charset="utf-8" type="text/javascript" src="https://ssl.google-analytics.com/siteopt.js?v=1&amp;utmxkey=2797291832&amp;utmx=&amp;utmxx=&amp;utmxtime=1401204527456"></script>
+    <!-- End of Google Website Optimizer Control Script -->
+    <!-- Google Website Optimizer Tracking Script -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['gwo._setAccount', 'UA-306602-3']);
+      _gaq.push(['gwo._trackPageview', '/2797291832/test']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <!-- End of Google Website Optimizer Tracking Script --><script type="text/javascript">
+    function sendVerificationLetter(){
+        $.get('http://www.4shared.com/account/sendEmailVerification.jsp?callback=?&amp;globSysLang=en', {ajax: 'true'} ,function(data){
+            var msg;
+            if (data.ok) {
+                msg = data.verificationMailSentMsg;
+            }else{
+                msg = data.errorMessage;
+            }
+            PopupModule.popupWithButtons({title:"Check your e-mail", content:msg});
+        }, "jsonp");
+    }
+</script><script type="text/javascript">
+  function feedback() {
+    var windowname="Feedback";
+    var url="/feedback.jsp";
+    OpenWindow = window.open(url,windowname,'toolbar=no,scrollbars=yes,resizable=yes,width=600,height=600,left=50,top=50');
+    OpenWindow.focus();
+  }
+  function reportAbuse() {
+    var windowname="abuse";
+    var url="/web/abuse?abuseType=1&amp;link=" + " ";
+    OpenWindow = window.open(url,windowname,'toolbar=no,scrollbars=yes,resizable=yes,width=600,height=650,left=50,top=50');
+    OpenWindow.focus();
+  }
+  function reportCopyright() {
+    var windowname="reportCopyright";
+    var url="/web/abuse?&amp;abuseType=2&amp;link=" + " ";
+    OpenWindow = window.open(url,windowname,'toolbar=no,scrollbars=yes,resizable=yes,width=600,height=750,left=50,top=50');
+    OpenWindow.focus();
+  }
+</script><link href="http://www.4shared.com/web/account/settings?locale=zh" hreflang="zh" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=it" hreflang="it" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=tr" hreflang="tr" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=vi" hreflang="vi" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=ms" hreflang="ms" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=ko" hreflang="ko" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=fa" hreflang="fa" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=ar" hreflang="ar" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=in" hreflang="in" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=th" hreflang="th" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=de" hreflang="de" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=pt-BR" hreflang="pt-BR" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=pl" hreflang="pl" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=fr" hreflang="fr" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=en" hreflang="en" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=ru" hreflang="ru" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=es" hreflang="es" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings?locale=ja" hreflang="ja" rel="alternate" />
+<link href="http://www.4shared.com/web/account/settings" hreflang="x-default" rel="alternate" /><meta content="255519317820035" property="fb:app_id" />
+<meta content="website" property="og:type" />
+<meta content="4shared" property="og:site_name" />
+<meta content="https://static.4shared.com/images/social/general.png?ver=4029806336" property="og:image" />
+  <link href="https://static.4shared.com/images/social/general.png?ver=4029806336" rel="image_src" />
+<script src="https://static.4shared.com/js/account/AccountSettings.4min.js?ver=2176752709" type="text/javascript"></script>
+<script src="https://static.4shared.com/js/reloadBackground.4min.js?ver=1302265784" type="text/javascript"></script>
+
+
+
+<script src="https://static.4shared.com/js/plugins/jquery.validate.min.js?ver=4272205743" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+  jQuery.extend(jQuery.validator.messages, {
+    required: "This field is required.",
+    remote: "Already used.",
+    email: "Please enter a valid email address.",
+    url: "Please enter a valid URL.",
+    date: "Please enter a valid date.",
+    dateISO: "Please enter a valid date (ISO).",
+    number: "Please enter a valid number.",
+    digits: "Please enter only digits.",
+    creditcard: "Please enter a valid credit card number.",
+    equalTo: "Please enter the same value again.",
+    accept: "Please enter a value with a valid extension.",
+    maxlength: jQuery.validator.format("Please enter no more than {0} characters."),
+    minlength: jQuery.validator.format("Please enter at least {0} characters."),
+    rangelength: jQuery.validator.format("Please enter a value between {0} and {1} characters long."),
+    range: jQuery.validator.format("Please enter a value between {0} and {1}."),
+    max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
+    min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
+  });
+</script><link href="https://static.4shared.com/css/AccountSettings.4min.css?ver=2851331786" type="text/css" rel="stylesheet" />
+</head>
+
+<body class="site4shared notPremiumUser Mozilla accountSettingsPage small_header notTouch userBg" style="cursor: auto; background-image: url(&quot;https://dc532.4shared.com/img/en35f5hjba/s11/1463e4c76a8/581421435.png&quot;); background-repeat: no-repeat; background-position: center top;">
+
+<div id="fstickcontainer"><div id="fstickcontent">
+
+       <link href="https://static.4shared.com/css/header.4min.css?ver=172144186" type="text/css" rel="stylesheet" />
+<link href="https://static.4shared.com/css/common.4min.css?ver=3843870151" type="text/css" rel="stylesheet" />
+<link href="https://static.4shared.com/css/mainWithoutCommon.4min.css?ver=1469812539" type="text/css" rel="stylesheet" />
+<!--[if IE 7]>
+       <style>
+          .p_window .cc{
+            margin: 0;
+          }
+       </style>
+    <![endif]-->
+
+    <!--[if lt IE 7]>
+        <script type="text/javascript">var IE7_PNG_SUFFIX=".png";</script>
+        <ft:js src="/js/IE7.js" />
+        <style>
+            .colFooter ul li.header{margin-left: 0;}
+        </style>
+    <![endif]-->
+	
+	<!--[if lte IE 7]>
+    <style type="text/css">
+        .downloadApp, .downloadApp span, .mobileBlock div {
+            display: inline;
+        }
+        #syncHeader{
+            display:inline;
+            zoom:1;
+        }
+    </style>
+    <![endif]-->
+	
+	<!--[if ie 9]>
+    <style type="text/css" media="screen">
+       .downloadApp {
+            filter: none;
+            background-image: url(https://static.4shared.com/gradient.svg?ver=568598074);
+            background-size: 200% 200%;
+            background-repeat: repeat-x;
+            background-position: 0 0;
+        }
+        .downloadApp:hover{
+            filter:none;
+            background-color:#12b0e3;
+        }
+    </style>
+    <![endif]-->
+
+  <!--[if lt ie 9]>
+    <style type="text/css">
+      #valid_new_email{
+        width: 255px !important;
+      }
+    </style>
+   <![endif]-->
+
+
+  <!--[if lte ie 9]>
+    <style type="text/css">
+      .p_window .cc iframe{
+          margin:10px 20px 0;
+      }
+      .p_window.shPopup .hh{
+          width: auto !important;
+      }
+      .p_window .friend-share{
+          margin: 0 !important;
+      }
+    </style>
+    <![endif]-->
+<link href="https://static.4shared.com/css/popup_n.4min.css?ver=158392589" type="text/css" rel="stylesheet" />
+<script src="https://static.4shared.com/js/PopupModule.4min.js?ver=2181960987" type="text/javascript"></script>
+<div style="display:none;" id="confirmPopup">
+  <input type="hidden" value="Error" class="jsErrorDefaultTitle" />
+  <input type="hidden" value="Info" class="jsInfoDefaultTitle" />
+  <div class="jsPopupBody confirmPopupBody alignLeft ffshadow">
+    <div class="jsConfirmMsg marginL25"></div>
+  </div>
+  <div class="grayPopupButton marginT15 round4 marginL10 ffshadow floatRight gaClick jsClose">Cancel</div>
+  <div class="bluePopupButton marginT15 confirmPopupBlueButton round4 floatRight gaClick jsConfirmOk">Ok</div>
+  <div class="clear"></div>
+</div><link href="https://static.4shared.com/css/notifyBlock.4min.css?ver=3608280725" type="text/css" rel="stylesheet" />
+<script src="https://static.4shared.com/js/notifyBlock.4min.js?ver=372123589" type="text/javascript"></script>
+<div style="display: none" class="notify-wrapper lucida" id="notify-wrapper">
+  <span class="notify">
+    <span class="notify-msg"></span>
+    <span class="notify-close"></span>
+  </span>
+</div><script type="text/javascript">
+  var mainSite = 'http://www.4shared.com/';
+</script>
+
+<div style="display: none;" id="langdiv">
+  <div class="langdiv lucida clearFix">
+          <div style="margin:0px; padding:0px;" class="column floatLeft paddingL30 marginL20"><a data-element="h18-en" class="lang-en gaClick" href="javascript:void(selectLang('en'));">English</a><a data-element="h18-pt-BR" class="lang-pt-BR gaClick" href="javascript:void(selectLang('pt-BR'));">Português (Brasil)</a><a data-element="h18-es" class="lang-es gaClick" href="javascript:void(selectLang('es'));">Español</a><a data-element="h18-ar" class="lang-ar gaClick" href="javascript:void(selectLang('ar'));">العربية</a><a data-element="h18-fr" class="lang-fr gaClick" href="javascript:void(selectLang('fr'));">Français</a><a data-element="h18-pl" class="lang-pl gaClick" href="javascript:void(selectLang('pl'));">Polski</a></div><div class="column floatLeft paddingL30 marginL20"><a data-element="h18-fa" class="lang-fa gaClick" href="javascript:void(selectLang('fa'));">پارسی</a><a data-element="h18-tr" class="lang-tr gaClick" href="javascript:void(selectLang('tr'));">Türkçe</a><a data-element="h18-in" class="lang-in gaClick" href="javascript:void(selectLang('in'));">Bahasa Indonesia</a><a data-element="h18-th" class="lang-th gaClick" href="javascript:void(selectLang('th'));">ไทย</a><a data-element="h18-de" class="lang-de gaClick" href="javascript:void(selectLang('de'));">Deutsch</a><a data-element="h18-it" class="lang-it gaClick" href="javascript:void(selectLang('it'));">Italiano</a></div><div class="column floatLeft paddingL30 marginL20"><a data-element="h18-zh" class="lang-zh gaClick" href="javascript:void(selectLang('zh'));">中文</a><a data-element="h18-ja" class="lang-ja gaClick" href="javascript:void(selectLang('ja'));">日本語</a><a data-element="h18-ko" class="lang-ko gaClick" href="javascript:void(selectLang('ko'));">한국어</a><a data-element="h18-vi" class="lang-vi gaClick" href="javascript:void(selectLang('vi'));">Tiếng Việt</a><a data-element="h18-ms" class="lang-ms gaClick" href="javascript:void(selectLang('ms'));">Bahasa Melayu</a><a data-element="h18-ru" class="lang-ru gaClick" href="javascript:void(selectLang('ru'));">Русский</a></div></div>
+</div>
+
+<script type="text/javascript">
+  $(function() {
+    $('.jsChangeLang').click(function() {
+      window.langPopup = PopupModule.popup({
+        element: $("#langdiv"),
+        title: 'Select language'
+      });
+      return false
+    });
+  })
+</script>
+
+<script src="https://static.4shared.com/js/AjaxSuggestion.4min.js?ver=2704950233" type="text/javascript"></script>
+<style type="text/css">
+  .verifyAlertO {
+      background: #fff2cc;
+      -moz-box-shadow: 0px 0px 5px #000000;
+      -webkit-box-shadow: 0px 0px 5px #000000;
+      box-shadow: 0px 0px 5px #000000;
+      position:relative;
+      z-index:997
+    }
+    .verifyAlert {
+      overflow:hidden;
+      padding:5px 10px 5px 55px;
+      background:url(https://static.4shared.com/images/confirm-letterbox.png?ver=3623346942) #fff2cc no-repeat 15px center;
+      color:#5c5c5c;
+      z-index:9999;
+      position:relative;
+      font-size: 12px
+    }
+    .pageAccount .verifyAlertO {position: absolute; width: 100%; display: none;}
+    .verifyAlert p {margin:5px 0;}
+    .verifyAlert p.verifyEmailName {width:850px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+    .verifyAlert i {color:black; font-style:normal;}
+    .verifyAlert .clBO {
+      position:absolute;
+      width:30px; height:30px;
+      right:15px; top:15px;
+      background:url(https://static.4shared.com/images/confirm-letterbox-close.png?ver=3949638711) center center no-repeat;
+      cursor:pointer;
+
+    }
+</style>
+<div class="newHeader smallHeader">
+  <div class="centered">
+
+    <div data-element="h1" class="floatLeft logo gaClick">
+        <a title="Free file sharing" href="http://www.4shared.com/"><img alt="Free file sharing" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" /></a>
+    </div>
+    <div class="floatLeft paddingL15 paddingR5 min"><img alt="Free file sharing" src="https://static.4shared.com/images/newUi/hLogo-arrow.png?ver=2321136823" /></div>
+        <script src="https://static.4shared.com/js/search.4min.js?ver=3153683594" type="text/javascript"></script>
+<input type="hidden" value="http://search.4shared.com" id="sPrefix" />
+<input type="hidden" value="/q/CCAD/1" class="sLink file" />
+<input type="hidden" value="/q/CCQD/1/video" class="sLink video" />
+<input type="hidden" value="/q/CCQD/1/music" class="sLink music" />
+<input type="hidden" value="/q/CCQD/1/photo" class="sLink photo" />
+<input type="hidden" value="/q/CCQD/1/game" class="sLink games" />
+<input type="hidden" value="/q/CCQD/1/books_office" class="sLink book" />
+<input type="hidden" value="/q/CCQD/1/video" class="sLink featured_videos" />
+<input type="hidden" value="Searching" id="sBreadcrumbsPhrase" />
+
+<div class="floatLeft paddingL20 searchbox">
+  <div class="searchform round4">
+    <div class="floatLeft filter roundTL4 roundBL4">
+
+      <a data-element="h2" class="active_filter roundTL4 gaClick" id="active_filter" href="#"><i class="file"><span class="sprite1 floatRight"></span></i></a>
+
+      <div class="cclick_container cfilter f13 jsSearchFilter">
+        <div class="dropdownInner">
+          <div class="dropdownTopArrow"></div>
+            <a style="border-top:0px aqua none" title="Files" data-element="h3" class="file gaClick" href="http://search.4shared.com/q/CAAD/1">Files</a>
+            <a title="Photo" data-element="h4" class="photo gaClick" href="http://search.4shared.com/q/CAQD/1/photo">Photo</a>
+            <a title="Music" data-element="h5" class="music gaClick" href="http://search.4shared.com/q/CAQD/1/music">Music</a>
+            <a title="Books" data-element="h6" class="book gaClick" href="http://search.4shared.com/q/CAQD/1/books_office">Books</a>
+            <a title="Video" data-element="h7" class="video gaClick" href="http://search.4shared.com/q/CAQD/1/video">Video</a>
+            <a title="Games" data-element="h8" class="games gaClick" href="http://search.4shared.com/q/CAQD/1/game">Games</a>
+            </div>
+      </div>
+    </div>
+    <div data-element="h2.1" class="floatLeft search roundTR4 roundBR4 paddingL10 gaClick">
+      <div style="display: none;" class="suggest f13 lucida roundBR4">
+        <div class="ii roundBR4">
+          <ul></ul>
+          <span id="cl">[x] Close</span>
+        </div>
+      </div>
+      <form id="search" class="floatLeft" action="">
+        <input type="text" placeholder="Search files" id="searchQuery" autocomplete="off" />
+      </form>
+
+
+      <a data-element="h9" class="floatRight proceed paddingR10 sprite1 gaClick" id="doSearch" href="#"></a>
+    </div>
+
+  </div>
+</div><div class="floatRight controls lucida">
+
+      <div class="inline textlink absmid">
+        <a data-element="h25_01" class="gaClick" href="http://www.4shared.com/account/home.jsp">background</a>
+      </div>
+
+      <div class="inline ucp item absmid">
+        <div title="sgfcdtft@grr.la" onclick="return false;" data-element="h25" class="textlink gaClick">
+          <i><span class="inline"> </span><span class="userpic sprite1 marginLR5 absmid">
+                <img width="25" height="25" alt="" src="" style="display:none" id="headerAvatar" />
+                </span>
+              <span class="expand absmid"></span></i>
+        </div>
+
+        <div class="click_container cucp in-tab round4 f13">
+          <div class="i round4 nowrap">
+            <div class="dropdownTopArrow"></div>
+            <div class="ls">
+                <a data-element="h26" class="gaClick" href="http://www.4shared.com/account/home.jsp">My Account</a>
+                  <hr />
+                <a data-element="h27" class="gaClick" href="/web/logout?returnTo=%2F">Sign Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="inline hdivider absmid"><span></span></div>
+        <script src="https://static.4shared.com/js/plugins/jquery.timeago.4min.js?ver=1405357982" type="text/javascript"></script>
+<div class="notificationBlockButton inline item absmid ncenter">
+  <div data-element="h15" class="notifications piclink sprite1 gaClick" id="notifications">
+    <i>
+      <span style="display:none" class="ncounter jsncounter">0</span>
+        <span class="iehfix"> </span>
+    </i>
+  </div>
+
+  <div class="click_container cnotifications in-tab round4 f11 ffshadow">
+    <div class="i dropdownInner">
+      <div class="dropdownTopArrow"></div>
+      <div class="ls">
+        <div style="display: none" class="nonotifications" id="nonotifications">
+          You have no notifications</div>
+        <div style="display:none" class="notificationsWrapper" id="ncontent">
+          <div class="alignCenter notifLoader" id="nloader">
+            <img class="absmid" src="https://static.4shared.com/images/ajax_loading.gif?ver=3975074307" />
+            <span class="absmid"> Loading</span>
+          </div>
+          <div id="nscroll" class="notification-area">
+            </div>
+        </div>
+        <a class="alln clear alignCenter f11" href="#" id="notificationsAll">View all notifications<i class="sprite1"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="display:none;" class="nitem clearFix" id="nItemTmp1">
+  <div class="uPhoto floatLeft">
+    <img src="" />
+  </div>
+
+  <div class="notificationText">
+    <span class="eventUserName"></span>
+    <span class="info1"></span>
+    <span class="eventFileName"></span>
+    <span class="info2"></span>
+    <span class="info3"></span>
+  </div>
+
+  <div class="notificationDate">
+    21 January
+  </div>
+
+  <div class="type sprite1 floatLeft"></div>
+  <div class="linkWord nBtn bblue"><span></span></div>
+
+</div>
+
+<input type="hidden" value="600000" id="interval" />
+<input type="hidden" value="Your file is ready for download:" id="archiveReadyDownload" />
+<input type="hidden" value="https://static.4shared.com/images/icons/48x48/zip-50.png?ver=3435396113" id="zipAvatar" />
+<input type="hidden" value="https://static.4shared.com/images/icons/48x48/b1-50.png?ver=1824675037" id="b1Avatar" />
+<input type="hidden" value="Your friend $[p1] just joined 4shared." id="contactRequestText" />
+
+<input type="hidden" value="View" id="tcommentText" />
+<input type="hidden" value="Accept" id="tshareTextUnread" />
+<input type="hidden" value="View" id="tshareText" />
+<input type="hidden" value="Read" id="tmessageText" />
+<input type="hidden" value="Download" id="tbgtaskText" />
+<input type="hidden" value="Allow Access" id="trequestText" />
+<input type="hidden" value="Invite" id="tinviteText" />
+<input type="hidden" value="View" id="timportText" />
+
+<script src="https://static.4shared.com/js/shortNotifications.4min.js?ver=769481097" type="text/javascript"></script>
+<div class="inline hdivider absmid"><span></span></div>
+        <div class="inline settings item absmid">
+
+        <div data-element="h15" class="gear piclink sprite1 gaClick"><i> </i></div>
+
+        <div class="click_container csettings in-tab round4 f13">
+          <div class="i round4">
+            <div class="dropdownTopArrow"></div>
+            <div class="ls">
+              <a class="gaClick" href="/web/account/settings">Settings</a>
+                <a href="/premium.jsp" data-element="h17" class="pr gaClick">Premium</a>
+<a onclick=" $('.settings .gear').click();" data-element="h18" class="jsChangeLang gaClick" id="changeLang" href="#"><span class="floatLeft">Language</span><span class="pr floatRight paddingR5">en</span></a>
+                <hr />
+              <a data-element="inv1" class="gaClick" href="/web/contacts">Invite friends</a>
+              <a data-element="h19" class="clear gaClick" href="/faq.jsp">FAQ</a>
+                <a data-element="h20" class="gaClick" href="/help/index.jsp">Help</a>
+              <a data-element="h21" class="gaClick" onclick="feedback(); $('.settings .gear').click()" href="#">Feedback</a>
+                <a data-element="h22" class="gaClick" onclick="reportAbuse(); $('.settings .gear').click()" href="#">Report abuse</a>
+              <!--a href="">Tour</a-->
+              <div class="clear"></div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+   <div class="clear"></div>
+  </div>
+</div>
+<script type="text/javascript">
+  function getFakePass2(el) {
+    var parent = el.parents('div:first')
+    return $('input[type=password]', parent).val()
+  }
+</script>
+
+<script type="text/javascript">
+  var debugInfo = {
+    loc : "Location = " + window.location,
+    usrAgent : "UserAgent = " + navigator.userAgent,
+    usrName  : "Login = sgfcdtft@grr.la",
+    accountType : "AccType = FREE",
+    winSize : "Window.W = " + screen.availWidth + "\nWindow.H = " + screen.availHeight,
+    title : "Title = dc571, rev=43021"
+  }
+  var userInfo = debugInfo.loc + "&lt;br&gt;" + debugInfo.usrAgent + "&lt;br&gt;" + debugInfo.usrName + "&lt;br&gt;" + debugInfo.accountType + "&lt;br&gt;" + debugInfo.winSize + "&lt;br&gt;" + debugInfo.title;
+</script>
+
+<script type="text/javascript">
+  $(document).keydown(function(e) {
+    if (!e) e = window.event;
+    var k = e.keyCode;
+    if (e.ctrlKey &amp;&amp; e.altKey &amp;&amp; k == 73) { // Alt+Ctrl+i
+      PopupModule.popup({
+        content: userInfo,
+        title: 'Debug Info'
+      })
+    }
+  });
+</script>
+
+<script type="text/javascript">
+
+    
+    function promptVerifyEmail(event){
+       PopupModule.popupWithButtons({title: 'Verify your email',
+         content: 'Verify your email.\n' +
+             'Press Ok and you will receive on email sgfcdtft@grr.la further instructions.',
+         type: 'error', buttonsType: 1, confirmCallback: sendVerificationLetter})
+       return false;
+    }
+    </script>
+
+<div class="centered lucida wrapper">
+
+  <div class="settingsNavigation floatLeft" id="settingsNavigation">
+    <ul class="settingsSwitchers round5 ffshadow">
+        <li data-view="overview" class="jsAccountSettings overview">
+            <h2 class="f15 bold dark-gray margin0">Account Overview</h2>
+            <div class="switsherHistory f11 light-gray">Change your basic account settings</div>
+        </li>
+      <li data-view="design" class="jsAccountSettings design active">
+            <h2 class="f15 bold dark-gray margin0">Design</h2>
+            <div class="switsherHistory f11 light-gray">Сustomize look &amp; feel</div>
+        </li>
+      <li data-view="socialnetworks" class="jsAccountSettings social">
+            <h2 class="f15 bold dark-gray margin0">Social Networks</h2>
+            <div class="switsherHistory f11 light-gray">Your social connections</div>
+        </li>
+      <li data-link="/premium.jsp" data-view="statistics" class="jsAccountSettings statistics premiumIcon">
+          <h2 class="f15 bold dark-gray margin0">Statistics</h2>
+          <div class="switsherHistory f11 light-gray">Watch download statistics</div>
+      </li>
+      <li data-view="oauthSettings" class="jsAccountSettings oauthSettings">
+        <h2 class="f15 bold dark-gray margin0">Applications</h2>
+        <div class="switsherHistory f11 light-gray">View the list of your apps</div>
+      </li>
+      <li data-view="importFiles" class="jsAccountSettings importFiles">
+          <h2 class="f15 bold dark-gray margin0">Import Files</h2>
+          <div class="switsherHistory f11 light-gray">Import files from the other web services</div>
+        </li>
+      <li data-view="profile" class="jsAccountSettings profile last">
+            <h2 class="f15 bold dark-gray margin0">Profile</h2>
+            <div class="switsherHistory f11 light-gray">View and edit your profile</div>
+        </li>
+    </ul>
+  </div>
+
+  <div class="jsSettingsView settingsMainArea paddingL15 floatLeft"><div class="jsDesignLoaded">
+    <h1 class="f18 bold dark-gray margin0">Design</h1>
+    <div class="switsherHistory f11 light-gray marginB15">Backgrounds allow you to change the look and feel of your 4shared pages. You can usedefault images or upload your own to
+        personalize your files pages and express your individuality</div>
+
+    <div class="settingsWrapper marginT15 lucida">
+
+        <div class="settingsRow clear tableLegend top">
+            <div class="inputTitle alignLeft">Pick a background</div>
+        </div>
+
+        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 336px;"><div class="thumbsContainer" style="overflow: hidden; width: auto; height: 336px;">
+            <img style="background-position:left -0px;" previewimg="/images/spacer.gif?" imageurl="/images/spacer.gif?" ordinal="0" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -134px;" previewimg="/images/backgrounds/l001.jpg" imageurl="/images/backgrounds/bg001.jpg" ordinal="1" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -268px;" previewimg="/images/backgrounds/l002.jpg" imageurl="/images/backgrounds/bg002.jpg" ordinal="2" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -402px;" previewimg="/images/backgrounds/l003.jpg" imageurl="/images/backgrounds/bg003.jpg" ordinal="3" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -536px;" previewimg="/images/backgrounds/l004.jpg" imageurl="/images/backgrounds/bg004.jpg" ordinal="4" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -670px;" previewimg="/images/backgrounds/l005.jpg" imageurl="/images/backgrounds/bg005.jpg" ordinal="5" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -804px;" previewimg="/images/backgrounds/l006.png" imageurl="/images/backgrounds/bg006.png" ordinal="6" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -938px;" previewimg="/images/backgrounds/l007.gif" imageurl="/images/backgrounds/bg007.gif" ordinal="7" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -1072px;" previewimg="/images/backgrounds/l008.png" imageurl="/images/backgrounds/bg008.png" ordinal="8" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -1206px;" previewimg="/images/backgrounds/l009.jpg" imageurl="/images/backgrounds/bg009.jpg" ordinal="9" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -1340px;" previewimg="/images/backgrounds/l010.jpg" imageurl="/images/backgrounds/bg010.jpg" ordinal="10" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -1474px;" previewimg="/images/backgrounds/l011.jpg" imageurl="/images/backgrounds/bg011.jpg" ordinal="11" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -1608px;" previewimg="/images/backgrounds/l012.jpg" imageurl="/images/backgrounds/bg012.jpg" ordinal="12" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -1742px;" previewimg="/images/backgrounds/l013.jpg" imageurl="/images/backgrounds/bg013.jpg" ordinal="13" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -1876px;" previewimg="/images/backgrounds/l014.jpg" imageurl="/images/backgrounds/bg014.jpg" ordinal="14" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -2010px;" previewimg="/images/backgrounds/l015.jpg" imageurl="/images/backgrounds/bg015.jpg" ordinal="15" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -2144px;" previewimg="/images/backgrounds/l016.gif" imageurl="/images/backgrounds/bg016.gif" ordinal="16" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -2278px;" previewimg="/images/backgrounds/l017.jpg" imageurl="/images/backgrounds/bg017.jpg" ordinal="17" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -2412px;" previewimg="/images/backgrounds/l018.jpg" imageurl="/images/backgrounds/bg018.jpg" ordinal="18" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -2546px;" previewimg="/images/backgrounds/l019.jpg" imageurl="/images/backgrounds/bg019.jpg" ordinal="19" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -2680px;" previewimg="/images/backgrounds/l020.jpg" imageurl="/images/backgrounds/bg020.jpg" ordinal="20" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -2814px;" previewimg="/images/backgrounds/l021.gif" imageurl="/images/backgrounds/bg021.gif" ordinal="21" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -2948px;" previewimg="/images/backgrounds/l022.jpg" imageurl="/images/backgrounds/bg022.jpg" ordinal="22" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -3082px;" previewimg="/images/backgrounds/l023.jpg" imageurl="/images/backgrounds/bg023.jpg" ordinal="23" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -3216px;" previewimg="/images/backgrounds/l024.jpg" imageurl="/images/backgrounds/bg024.jpg" ordinal="24" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -3350px;" previewimg="/images/backgrounds/l025.jpg" imageurl="/images/backgrounds/bg025.jpg" ordinal="25" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -3484px;" previewimg="/images/backgrounds/l026.jpg" imageurl="/images/backgrounds/bg026.jpg" ordinal="26" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -3618px;" previewimg="/images/backgrounds/l027.jpg" imageurl="/images/backgrounds/bg027.jpg" ordinal="27" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -3752px;" previewimg="/images/backgrounds/l028.jpg" imageurl="/images/backgrounds/bg028.jpg" ordinal="28" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -3886px;" previewimg="/images/backgrounds/l029.jpg" imageurl="/images/backgrounds/bg029.jpg" ordinal="29" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -4020px;" previewimg="/images/backgrounds/l030.jpg" imageurl="/images/backgrounds/bg030.jpg" ordinal="30" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -4154px;" previewimg="/images/backgrounds/l031.jpg" imageurl="/images/backgrounds/bg031.jpg" ordinal="31" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -4288px;" previewimg="/images/backgrounds/l032.jpg" imageurl="/images/backgrounds/bg032.jpg" ordinal="32" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -4422px;" previewimg="/images/backgrounds/l033.jpg" imageurl="/images/backgrounds/bg033.jpg" ordinal="33" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -4556px;" previewimg="/images/backgrounds/l034.jpg" imageurl="/images/backgrounds/bg034.jpg" ordinal="34" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -4690px;" previewimg="/images/backgrounds/l035.jpg" imageurl="/images/backgrounds/bg035.jpg" ordinal="35" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -4824px;" previewimg="/images/backgrounds/l036.jpg" imageurl="/images/backgrounds/bg036.jpg" ordinal="36" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -4958px;" previewimg="/images/backgrounds/l037.jpg" imageurl="/images/backgrounds/bg037.jpg" ordinal="37" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -5092px;" previewimg="/images/backgrounds/l038.jpg" imageurl="/images/backgrounds/bg038.jpg" ordinal="38" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -5226px;" previewimg="/images/backgrounds/l039.jpg" imageurl="/images/backgrounds/bg039.jpg" ordinal="39" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -5360px;" previewimg="/images/backgrounds/l040.jpg" imageurl="/images/backgrounds/bg040.jpg" ordinal="40" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -5494px;" previewimg="/images/backgrounds/l041.jpg" imageurl="/images/backgrounds/bg041.jpg" ordinal="41" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -5628px;" previewimg="/images/backgrounds/l042.jpg" imageurl="/images/backgrounds/bg042.jpg" ordinal="42" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -5762px;" previewimg="/images/backgrounds/l043.jpg" imageurl="/images/backgrounds/bg043.jpg" ordinal="43" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -5896px;" previewimg="/images/backgrounds/l044.jpg" imageurl="/images/backgrounds/bg044.jpg" ordinal="44" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -6030px;" previewimg="/images/backgrounds/l045.jpg" imageurl="/images/backgrounds/bg045.jpg" ordinal="45" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -6164px;" previewimg="/images/backgrounds/l046.jpg" imageurl="/images/backgrounds/bg046.jpg" ordinal="46" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -6298px;" previewimg="/images/backgrounds/l047.jpg" imageurl="/images/backgrounds/bg047.jpg" ordinal="47" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -6432px;" previewimg="/images/backgrounds/l048.jpg" imageurl="/images/backgrounds/bg048.jpg" ordinal="48" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -6566px;" previewimg="/images/backgrounds/l049.jpg" imageurl="/images/backgrounds/bg049.jpg" ordinal="49" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -6700px;" previewimg="/images/backgrounds/l050.jpg" imageurl="/images/backgrounds/bg050.jpg" ordinal="50" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            <img style="background-position:left -6834px;" previewimg="/images/backgrounds/l051.jpg" imageurl="/images/backgrounds/bg051.jpg" ordinal="51" class="backgroundThumb floatLeft" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" />
+            </div><div class="slimScrollBar" style="background: none repeat scroll 0% 0% rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 121.263px;"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: none repeat scroll 0% 0% rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div>
+
+        <div class="settingsRow clear tableLegend marginT5">
+            <div class="inputTitle alignLeft">Customize your own</div>
+        </div>
+
+        <hr class="marginT10" />
+
+<input type="hidden" value="0" id="activeStandartBackground" />
+<input type="hidden" value="true" id="haveCustomBackground" />
+<input type="hidden" value="https://dc532.4shared.com/img/en35f5hjba/s11/1463e4c76a8/581421435.png" id="customBackgroundImageLink" />
+<input type="hidden" value="https://dc532.4shared.com/img/en35f5hjba/1463e4c76a8/581421435.png" id="customBackgroundImagePreview" />
+<input type="hidden" value="en35f5hjba" id="customBackgroundFileId" />
+
+        <div class="settingsRow clear">
+            <div class="inputTitle">Background</div>
+            <div class="inputBody wide">
+                <div class="backgroundPreview floatLeft marginR10">
+                    <img id="currentBackgroundImgPreview" alt="CurrentBackgroundImg" src="/images/spacer.gif" />
+                </div>
+                <div class="jsBackgroundUploadButton d1TypeGrayButton round5 floatLeft">Upload your picture<input type="file" class="fakefile" name="file000" id="userBackgroundSelect" />
+                </div><div class="loaderForNonOverflowedButton floatLeft marginL10" style="display: none;"></div>
+                <div class="uploadBgLegend light-gray f11 marginT5 floatLeft">Maximum size of file 200KB</div>
+                <div class="tileBlock dark-gray f12 floatLeft marginT5" style="display: block;">
+                    <input type="checkbox" value="false" name="tileBackground" id="tileBackground" />
+                    <label for="tileBackground">Tile background</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="submit-blue saveChangesButton round5 marginT15 floatLeft jsDesignSaveChanges" id="saveBackground">Save changes</div>
+
+<div style="display: none" id="uploadBackgroundParams">
+  <input type="hidden" id="backgroundUploadURL" value="/main/uploadBackground.jsp" />
+  <input type="hidden" id="backgroundUploadDirId" value="V2LnkwrH" />
+  <input type="hidden" id="backgroundMaxSize" value="204800" />
+</div>
+
+</div>
+</div></div>
+
+  <div style="display: none" class="jsErrorsFromServer"></div>
+
+  <input type="hidden" value="Your settings have been saved" id="notifySuccessMessage" />
+
+  </div>
+  </div><div id="fstickfooter">
+  <div class="footer_in">
+    <div id="footer">
+      <div style="border-top:solid 1px #F5F4F1" class="footer">
+    <div class="centered">
+    <table width="100%" cellspacing="0" cellpadding="0">
+        <tbody><tr valign="top">
+            <td class="fcol first">
+                <div>Site Links</div>
+                <a href="http://www.4shared.com/">Home</a><br />
+                <a href="http://www.4shared.com/premium.jsp?ref=footer">Premium</a><br />
+                <a href="http://www.4shared.com/links.jsp">Link to Us</a><br />
+                <a href="https://search.4shared.com:443/search.html">Search</a><br />
+            </td>
+            <td class="fcol">
+                <div>Help</div>
+                <a href="http://www.4shared.com/faq.jsp">FAQ</a><br />
+                <a href="http://www.4shared.com/help/index.jsp">Help</a><br />
+                <a href="http://www.4shared.com/tutorial/">Quick Tour</a><br />
+                <a href="http://www.4shared.com/features.jsp">Features</a><br />
+                <a href="http://www.4shared.com/contact.jsp">Contact Us</a>
+            </td>
+            <td class="fcol">
+                <div>About</div>
+                <a href="http://www.4shared.com/aboutus.jsp">Company</a><br />
+                <a href="http://www.4shared.com/advertise/">Advertising</a><br />
+                <a href="http://www.4shared.com/resellers.jsp">Resellers</a><br />
+                <a href="http://www.4shared.com/paymentContacts.jsp">Payment Contacts</a><br />
+                <a href="http://www.4shared.com/copyright-center.jsp">Copyright</a>
+            </td>
+            <td class="fcol">
+                <div>Legal</div>
+                <a href="http://www.4shared.com/terms.jsp">Terms of Use</a><br />
+                <a href="http://www.4shared.com/privacy.jsp">Privacy</a><br />
+                <a href="http://www.4shared.com/dmca.jsp">Copyright Infringement</a><br />
+                <a href="http://www.4shared.com/security.jsp">Security</a><br />
+                <a href="http://www.4shared.com/musicIdentification.jsp">Music Identification</a><br />
+                <a title="Service Level Agreement" href="http://www.4shared.com/sla.jsp">SLA</a><br />
+                </td>
+            <td class="fcol">
+                <div>Sharing</div>
+                <a href="http://www.4shared.com/4shared-features.jsp#filesh">File Sharing</a><br />
+                <a href="http://www.4shared.com/4shared-features.jsp#musicsh">Music Sharing</a><br />
+                <a href="http://www.4shared.com/4shared-features.jsp#photosh">Photo Sharing</a><br />
+                <a href="http://www.4shared.com/4shared-features.jsp#videosh">Video Sharing</a><br />
+                <a href="http://www.4shared.com/4shared-features.jsp#docsh">Document Sharing</a>
+            </td>
+            <td class="fcol">
+                <div>Media</div>
+                <a href="http://www.4shared.com/press_room/">Press Room</a><br />
+                <a target="_blank" href="http://blog.4shared.com/">Blog</a><br />
+                <a style="white-space:nowrap;" rel="nofollow" title="Follow us on Twitter" target="_blank" href="http://twitter.com/4shared"><img class="tw" alt="Twitter" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" /> Twitter</a><br />
+                <a style="white-space:nowrap;" rel="nofollow" title="Follow us on Facebook" target="_blank" href="http://www.facebook.com/official.4shared"><img class="fb" alt="Facebook" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" /> Facebook</a><br />
+                <a rel="nofollow" title="Read Us on Google Plus" target="_blank" href="https://plus.google.com/114619261879843970270?rel=author"><img class="gp" alt="Google+" src="https://static.4shared.com/images/spacer.gif?ver=1912669180" /> Google+</a><br />
+            </td>
+            <td class="fcol last">
+                <div>Tools</div>
+                    <a href="http://www.4shared.com/mobile.jsp">4shared Mobile</a><br />
+                    <a href="http://www.4shared.com/desktop/">4shared Desktop</a><br />
+                    <a href="http://www.4shared.com/developer/">Developer</a><br />
+
+
+            </td>
+        </tr>
+    </tbody></table>
+    </div>
+    </div>
+
+<div class="copy">
+        <div class="centered">
+          <div class="floatLeft alignRight">
+             Copyright <span title="dc571, rev=43021">©</span> 2005-2014 4shared.com </div>
+          <div id="0b69e881-c8aa-478c-a8ce-4f1fc3d88e75" class="floatRight truste">
+            <a rel="nofollow" target="_blank" title="TRUSTe online privacy certification" href="//privacy.truste.com/privacy-seal/New-It-Solutions-LTD-/validation?rid=b1a9e118-8fff-41a0-b6a4-5cb20219e036"></a>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- www.currDcID=571 -->
+
+<!-- Start Quantcast tag -->
+<script src="//secure.quantserve.com/quant.js" type="text/javascript"></script>
+<script type="text/javascript">
+_qacct="p-23Fqia_-MkKko";quantserve();</script>
+<noscript>
+&lt;a href="http://www.quantcast.com/p-23Fqia_-MkKko" target="_blank"&gt;
+  &lt;img src="//secure.quantserve.com/pixel/p-23Fqia_-MkKko.gif" border="0" style="display: none" height="1" width="1" alt="Quantcast"&gt;
+&lt;/a&gt;
+</noscript>
+<!-- End Quantcast tag -->
+<script type="text/javascript">
+    document.write("&lt;img src='//www.jscount.com/a/4/28b1a41b/z?ref="+
+            escape(document.referrer)+"&amp;url="+escape(document.URL)+"&amp;rand="+Math.random()+"' width=1 height=1 alt='' style='display:none'&gt;")
+</script><img width="1" height="1" style="display:none" alt="" src="//www.jscount.com/a/4/28b1a41b/z?ref=https%3A//www.4shared.com/account/home.jsp&amp;url=https%3A//www.4shared.com/web/account/settings&amp;rand=0.5603151095695392" />
+
+
+<!-- Start of google-analytics -->
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-306602-1']);
+_gaq.push(['_setCustomVar', 1, 'User Type', 'Registered', 2]);
+_gaq.push(['_trackPageview']);
+_gaq.push(['_setSampleRate', '10']);
+
+(function() { var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); })();
+
+</script>
+<!-- End of google-analytics -->
+<!-- Crosswise counter -->
+<iframe style="display:none" sandbox="" src="/cross.jsp"></iframe>
+<!-- /Crosswise counter -->
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://static.4shared.com/js/plupload/plupload.4min.js?ver=1558343001" type="text/javascript"></script>
+
+<script src="https://static.4shared.com/js/plupload/plupload.flash.4min.js?ver=4149469967" type="text/javascript"></script>
+
+
+<script src="https://static.4shared.com/js/UploadModule.4min.js?ver=3645591769" type="text/javascript"></script>
+
+<script src="https://static.4shared.com/js/Jsonp.4min.js?ver=1429979772" type="text/javascript"></script>
+
+
+
+
+
+  
+
+
+<script type="text/javascript">
+  UploadModule.build = function(options) {
+    var defaultSettings = {
+      
+      url: '/main/upload.jsp',
+      
+      max_file_size: 0,
+      dc_path : 'https://dc532.4shared.com',
+      i18n: {
+        file_size_exceeded: "File is too large. You can\'t upload files larger than [maxFileSize] .",
+        some_files_size_exceeded: 'Some files limit exceeded. Continue without them?',
+        no_files_selected: "You haven\'t selected any file to upload yet.",
+        file_already_in_proccess: 'This file already in process.',
+        your_browser_not_supported: 'File is too large. Try uploading via 4shared Desktop.',
+        you_can_resume_upload: 'Your transfer have been canceled. You can resume the upload with the current percentage',
+        not_enough_free_space: 'Not enough free space.',
+        can_not_upload_empty_file : "File is empty or can\'t be found.",
+        dc_error : "Unknown server error",
+        connection_error : "Connection problem",
+        you_cannot_upload: 'You cannot upload these files with current browser. Please try desktop version.',
+        you_cannot_upload_flash: 'You cannot upload these files with Multiupload. Please try 4shared desktop.',
+        some_files_cannot_upload_flash: 'Multiupload failed. Try uploading via 4shared Desktop.',
+        file_uploading_from_another_place : "File upload has already been resumed from another browser.",
+        file_was_removed : "File is empty or can\'t be found.",
+        incompleted_was_deleted : "File was removed from server.",
+        continue_without_flash: 'Continue without them?',
+        errors_files_flash: '($[p1] files total)',
+        wrong_file_type : 'Wrong file type.',
+        pending_upload_page_close: 'Your upload may be incomplete if you leave this page.'
+      },
+      resumable: {
+        section_size: 10240000,
+        user_agents: 'chrome,firefox'
+      }
+    }
+    options = $.extend(true, defaultSettings, options)
+    return new UploadModule(options)
+  }
+</script><link href="https://static.4shared.com/css/deleteAccountPopup.4min.css?ver=2146695093" type="text/css" rel="stylesheet" />
+<input type="hidden" value="Delete account?" id="accountCancelConfirmTitle" />
+<input type="hidden" value="Delete" id="accountCancelConfirmOk" />
+<input type="hidden" value="Cancel" id="accountCancelConfirmCancel" />
+<input type="hidden" value="Deactivate Account" id="accountCancellationTitle" />
+<input type="hidden" value="Do you want to delete the account?" id="accountCancellationConfirm" />
+
+
+<script src="https://static.4shared.com/js/account/AccountCancellation.4min.js?ver=2372049610" type="text/javascript"></script>
+
+
+<div style="max-width:250px;" id="tiptip_holder"><div id="tiptip_arrow"><div id="tiptip_arrow_inner"></div></div><div class="lucida" id="tiptip_content"></div></div><div id="HandlerUploadFormContainer"></div><div id="GetSizeFormsContainer"></div><iframe class="jsopProgressFrame" style="display: none;" id="iframe0.2241268641307056" name="iframe0.2241268641307056" src="https://dc532.4shared.com/servlet/ProgressStatus2?sessionUploadId=0.8711857015394802&amp;0.8716809064334463&amp;jsonp=Jsonp.JsonpCallback&amp;id=0.9696351759251317"></iframe><img style="display: none;" src="https://dc532.4shared.com/img/en35f5hjba/1463e4c76a8/581421435.png?async=&amp;rand=0.5961984689816864" /></body></html>
